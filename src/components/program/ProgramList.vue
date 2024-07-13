@@ -3,7 +3,7 @@
     <div class="program-list">
         <div class="program-grid">
             <div class="program-item" v-for="program in programs" :key="program.id">
-                <programItem :program="program" />
+                <ProgramItem :program="program" />
             </div>
         </div>
     </div>
@@ -19,21 +19,21 @@
 </style>
 
 <script>
-import programItem from 'src/components/program/programItem.vue'
+import ProgramItem from 'src/components/program/ProgramItem.vue'
 
 export default{
-    name:"programList",
-    components: {programItem},
+    name:"ProgramList",
+    components: {ProgramItem},
     data(){
         return {
             programs: []
         }
     },
     mounted(){
-        this.loadprograms()
+        this.loadPrograms()
     },
     methods:{
-        loadprograms(){
+        loadPrograms(){
             var URL = "/program"
             var token = JSON.parse(localStorage.getItem("userData")).result.token
             console.log("TOKEN es : " + token)

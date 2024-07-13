@@ -39,7 +39,7 @@ export default {
             timeout: 5000
           })
           localStorage.setItem("userData", JSON.stringify(response.data))
-          this.$router.push("/dashboard/product")
+          this.$router.push("/dashboard/program")
         }).catch(error => {
           console.log(JSON.stringify(error))
         })
