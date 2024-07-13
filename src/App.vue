@@ -2,8 +2,8 @@
   <router-view />
 </template>
 
-<script setup>
+<!--script setup>
 defineOptions({
   name: 'App'
 });
-</script>
+</script-->
